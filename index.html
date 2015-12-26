@@ -1,0 +1,152 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+  <title>Bizleap</title> 
+  <meta name="viewport" content="initial-scale=1.0">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <link rel="stylesheet" href="jquery.mobile-1.4.5.min.css" />
+  <link rel="stylesheet" href="jquery.mobile-1.4.5.min.css" />
+  <script src="jquery-1.9.1.min.js"></script>
+  <script src="jquery.mobile-1.4.5.min.js"></script>
+  <script>
+		$( document ).on( "pagecreate", function() {
+			$( "#theme-selector input" ).on( "change", function( event ) {
+				var themeClass = $( "#theme-selector input:checked" ).attr( "id" );
+
+				$( "#testpage" ).removeClass( "ui-page-theme-a ui-page-theme-b" ).addClass( "ui-page-theme-" + themeClass );
+				$( "#ui-body-test" ).removeClass( "ui-body-a ui-body-b" ).addClass( "ui-body-" + themeClass );
+				$( "#ui-bar-test, #ui-bar-form" ).removeClass( "ui-bar-a ui-bar-b" ).addClass( "ui-bar-" + themeClass );
+				$( ".ui-collapsible-content" ).removeClass( "ui-body-a ui-body-b" ).addClass( "ui-body-" + themeClass );
+				$( ".theme" ).text( themeClass );
+			});
+			$( "#opt-shadow input" ).on( "change", function( event ) {
+				if ( $( "#on" ).prop( "checked" ) ) {
+					$( "#testpage" ).removeClass( "noshadow" );
+				} else if ( $( "#off" ).prop( "checked" ) ) {
+					$( "#testpage" ).addClass( "noshadow" );
+				}
+			});
+			$( "#opt-navbars input" ).on( "change", function( event ) {
+				if ( $( "#show" ).prop( "checked" ) ) {
+					$( "#testpage .ui-navbar" ).show();
+					$( "#testpage .ui-footer h4" ).hide();
+				} else if ( $( "#hide" ).prop( "checked" ) ) {
+					$( "#testpage .ui-navbar" ).hide();
+					$( "#testpage .ui-footer h4" ).show();
+				}
+			});
+		});
+	</script>
+</head> 
+<body> 
+
+<div data-role="page" class="background">
+  <div data-role="header" data-position="fixed">
+    <h1>Contact</h1>
+  </div><!-- /header -->
+		<div data-role="content">
+		<form>
+			<input data-type="search" id="searchForCollapsibleSet">
+		</form>
+		<div data-role="collapsibleset" data-filter="true" data-inset="true" id="collapsiblesetForFilter" data-input="#searchForCollapsibleSet">
+        <div data-role="collapsible" data-filtertext="KOL">
+            <h3>KOL</h3>
+            <ul data-role="listview" data-inset="false">
+                <li><a href="tel:0943105762">09-43105762</a></li>
+                <li><a href="tel:09420112458">09-420112458</a></li>
+                <li><a href="tel:095125376">09-5125376</a></li>
+            </ul>
+        </div>
+		<div data-role="collapsible" data-filtertext="TZK">
+            <h3>TZK</h3>
+            <ul data-role="listview" data-inset="false" >
+                <li><a href="tel:095065543">09-5065543</a></li>
+            </ul>
+        </div>
+		<div data-role="collapsible" data-filtertext="SPZ">
+            <h3>SPZ</h3>
+            <ul data-role="listview" data-inset="false" >
+                <li><a href="tel:095065543">09-5065543</a></li>
+            </ul>
+        </div>
+		<div data-role="collapsible" data-filtertext="TECH">
+            <h3>TECH</h3>
+            <ul data-role="listview" data-inset="false" >
+                <li><a href="tel:095115710">09-5065543</a></li>		
+				<li><a href="tel:09420074266">09-420074266</a></li>
+				<li><a href="tel:09790638317">09-790638317</a></li>
+            </ul>
+        </div>
+		<div data-role="collapsible" data-filtertext="IR">
+            <h3>IR</h3>
+            <ul data-role="listview" data-inset="false" >
+                <li><a href="tel:098501936">09-8501936</a></li>	
+				<li><a href="tel:0944853473">09-44853473</a></li>
+            </ul>
+        </div>
+		<div data-role="collapsible" data-filtertext="IEM">
+            <h3>IEM</h3>
+            <ul data-role="listview" data-inset="false" >
+                <li><a href="tel:09261149293">09-261149293</a></li>		
+				<li><a href="tel:01401450">01-401450</a></li>
+				<li><a href="tel:018603665">01-8603665</a></li>
+            </ul>
+        </div>
+		<div data-role="collapsible" data-filtertext="One2One">
+            <h3>One2One</h3>
+            <ul data-role="listview" data-inset="false" >
+                <li><a href="tel:01205196">01-205196</a></li>				
+				<li><a href="tel:095135634">09-5135634</a></li>
+				<li><a href="tel:09428201873">09-428201873</a></li>
+            </ul>
+        </div>
+		<div data-role="collapsible" data-filtertext="YCDC">
+            <h3>YCDC</h3>
+            <ul data-role="listview" data-inset="false" >
+                <li><a href="tel:"0973016990">09-73016990</a></li>
+            </ul>
+        </div>
+		<div data-role="collapsible" data-filtertext="D.G3">
+            <h3>D.G3</h3>
+            <ul data-role="listview" data-inset="false" >
+                <li><a href="tel:09-254148603">254148603</a></li>		
+            </ul>
+        </div>
+		<div data-role="collapsible" data-filtertext="MCEA">			
+            <h3>IEM</h3>
+            <ul data-role="listview" data-inset="false" >
+                <li><a href="tel:01579547">01-579547</a></li>		
+				<li><a href="tel:01560725">01-560725</a></li>
+            </ul>
+        </div>
+		<div data-role="collapsible" data-filtertext="MSCL">			
+            <h3>MSCL</h3>
+            <ul data-role="listview" data-inset="false" >
+                <li><a href="tel:098634890">09-8634890</a></li>		
+            </ul>
+        </div>
+		<div data-role="collapsible" data-filtertext="121 CAVLE & WIRE">						
+            <h3>121 CAVLE & WIRE</h3>
+            <ul data-role="listview" data-inset="false" >
+                <li><a href="tel:095109831">09-5109831</a></li>	
+				<li><a href="tel:01206195">01-206195</a></li>	
+				<li><a href="tel:09250525051">09-250525051</a></li>	
+            </ul>
+        </div>
+        <div data-role="collapsible" data-filtertext="BizLeap">
+            <h3>BizLeap</h3>
+            <ul data-role="listview" data-inset="false" >
+                <li><a href="tel:01511522">01-511522</a></li>
+            </ul>
+        </div>
+    </div>
+	</div><!-- /content -->
+  <div data-role="footer" data-position="fixed">
+      <h4> Powered by BizLeap Technology</h4>
+  </div>
+
+</div><!-- /page -->
+
+</body>
+</html>
